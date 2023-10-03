@@ -42,7 +42,7 @@ jobs:
         curl -Ls "https://github.com/jeremylong/DependencyCheck/releases/download/v$VERSION/dependency-check-$VERSION-release.zip" --output dependency-check.zip
         unzip dependency-check.zip
         cd dependency-check/bin
-        ./dependency-check.sh --out . --scan target/webgoat-2023.5-SNAPSHOT.jar
+        ./dependency-check.sh --out . --scan **/webgoat-2023.5-SNAPSHOT.jar
 
     - name: Upload OWASP Dependency-Check Report
       uses: actions/upload-artifact@master
